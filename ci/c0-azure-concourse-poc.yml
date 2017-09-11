@@ -48,8 +48,8 @@ resources:
 - name: azure-concourse
   type: git
   source:
-    uri: https://github.com/c0-ops/azure-concourse.git
-    branch: master
+    uri: https://github.com/gossion/azure-concourse.git
+    branch: guwe
 
 - name: ert-concourse
   type: git

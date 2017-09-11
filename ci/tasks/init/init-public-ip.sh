@@ -29,6 +29,9 @@ unzip /tmp/terraform.zip
 sudo cp terraform /usr/local/bin
 export PATH=/opt/terraform/terraform:$PATH
 
+# Get terraform provider
+go get -d github.com/terraform-providers/terraform-provider-azurerm
+
 function fn_terraform {
 
 terraform ${1} \
