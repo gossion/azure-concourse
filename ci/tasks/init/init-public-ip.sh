@@ -29,11 +29,7 @@ unzip /tmp/terraform.zip
 sudo cp terraform /usr/local/bin
 export PATH=/opt/terraform/terraform:$PATH
 
-# Get terraform provider
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/gocode
-export PATH=$PATH:$GOPATH/bin
-go get github.com/terraform-providers/terraform-provider-azurerm
+terraform init -upgrade azure-concourse/terraform/${azure_pcf_terraform_template}/init
 
 function fn_terraform {
 
