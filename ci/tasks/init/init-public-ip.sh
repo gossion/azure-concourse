@@ -30,7 +30,10 @@ sudo cp terraform /usr/local/bin
 export PATH=/opt/terraform/terraform:$PATH
 
 # Get terraform provider
-go get -d github.com/terraform-providers/terraform-provider-azurerm
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/gocode
+export PATH=$PATH:$GOPATH/bin
+go get github.com/terraform-providers/terraform-provider-azurerm
 
 function fn_terraform {
 
