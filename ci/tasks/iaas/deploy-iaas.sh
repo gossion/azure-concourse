@@ -128,6 +128,8 @@ if [[ ${pcf_ssh_key_pub} == 'generate' ]]; then
   echo "******************************"
 fi
 
+terraform init -upgrade azure-concourse/terraform/$azure_pcf_terraform_template
+
 function fn_exec_tf {
   echo "=============================================================================================="
   echo "Executing Terraform ${1} ..."
